@@ -1,0 +1,114 @@
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.controls-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.play-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+  min-width: 110px;
+}
+
+.play-btn.playing {
+  background: linear-gradient(135deg, #FF6B9D, #FF4757);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+.play-btn.paused {
+  background: linear-gradient(135deg, #5352ED, #3742FA);
+  color: white;
+  box-shadow: 0 4px 15px rgba(55, 66, 250, 0.4);
+}
+
+.play-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.play-btn:active {
+  transform: scale(0.97);
+}
+
+.move-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.move-btn:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-2px);
+}
+
+.move-btn:active {
+  transform: scale(0.97);
+}
+
+.speed-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.speed-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.05em;
+}
+
+.speed-buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.speed-btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 20px;
+  cursor: pointer;
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  transition: all 0.2s ease;
+}
+
+.speed-btn:hover {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.speed-btn.active {
+  background: rgba(255,255,255,0.9);
+  color: #5352ED;
+  border-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}

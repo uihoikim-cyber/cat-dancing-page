@@ -1,0 +1,101 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 420px;
+  width: 100%;
+}
+
+.app-header {
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.cat-stage {
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  padding: 1rem 2rem 0.5rem;
+  transition: background 0.2s;
+  user-select: none;
+  outline: none;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-stage:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.cat-stage:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.6);
+}
+
+.paused-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+}
+
+.paused-text {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  letter-spacing: 0.05em;
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    padding: 1rem;
+  }
+}
